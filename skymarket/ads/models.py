@@ -1,7 +1,4 @@
-from django.conf import settings
 from django.db import models
-
-from skymarket import users
 
 
 class Ad(models.Model):

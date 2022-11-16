@@ -8,7 +8,7 @@ class UserRoles(models.TextChoices):
 
 
 class UserManager(BaseUserManager):
-    def create_user(self, email, first_name, last_name, phone, role=UserRoles.USER, password=None):
+    def create_user(self, email, first_name, last_name, phone, password=None, role=UserRoles.USER):
         if not email:
             raise ValueError('Users must have an email address')
         user = self.model(
